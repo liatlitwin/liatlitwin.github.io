@@ -35,6 +35,29 @@ h3{
 	color: 6B3C73;
 	margin-bottom: 3px;
 }
+ul{
+	font-family: Georgia;
+	margin-top: 0px;
+	max-width: 550px;
+	list-style-type: square;
+}
+h4{
+	text-align: left;
+	color:324F39;
+	font-size:14px;
+	margin-top: 10px;
+	margin-bottom: 2px;
+	max-width: 450px;
+}
+.date{
+	float:right;
+	text-align: right;
+	font-style: italic;
+	font-size: 14px;
+	color:324F39;
+	margin-top:10px;
+}
+
 p{
 	text-align: center;
 	
