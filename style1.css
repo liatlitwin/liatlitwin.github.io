@@ -1,0 +1,41 @@
+body {
+	font-family: Georgia;
+	font-size: small;
+	color: #45274A;
+	background-color: #DFD3B7;
+
+}
+div.border
+{
+	background-color: #FFF;
+	padding:16px;
+	border:solid #AD967D;
+	border-width:1px 3px 3px 1px;
+	margin:16px auto;
+	max-width: 800px;
+}
+
+/* Main header (name) */
+h1 {
+	text-align: center;
+}
+
+/*education */
+h2{
+	font-size: 14px;
+	text-align: left;
+
+	color: 6B3C73;
+}
+h3{
+	font-size: 20px;
+	border-bottom: 1px solid #6B3C73;
+	font-style: italic;
+	font-variant: small-caps;
+	color: 6B3C73;
+	margin-bottom: 3px;
+}
+p{
+	text-align: center;
+	
+}
