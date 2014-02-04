@@ -57,6 +57,17 @@ h4{
 	color:324F39;
 	margin-top:10px;
 }
+.position{
+	font-weight: bold;
+	font-size: 14px;
+	color:6AA879;
+	margin-top: 0px;
+	margin-bottom: 3px;
+}
+#bold{
+	font-weight: bold;
+	display: inline-block;
+}
 
 p{
 	text-align: center;
