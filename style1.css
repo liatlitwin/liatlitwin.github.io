@@ -64,7 +64,7 @@ h4{
 	margin-top: 0px;
 	margin-bottom: 3px;
 }
-#bold{
+.bold{
 	font-weight: bold;
 	display: inline-block;
 }
