@@ -1,11 +1,46 @@
+@import url(http://fonts.googleapis.com/css?family=Artifika);
+@import url(http://fonts.googleapis.com/css?family=Ruda);
+
+a:link{color:white; text-decoration: none}
+a:hover{color:grey; text-decoration: none}
+a:visited{color:white; text-decoration: none}
+
 body {
-	font-family: Georgia;
+	font-family: Georgia, 'Artifika', serif, 'Ruda', sans-serif;
 	font-size: small;
 	color: #45274A;
 	background-color: #DFD3B7;
 
 }
-div.border
+img{
+	width:90%;
+	height:90%;
+	border:1px solid;
+	margin-top: 20px;
+}
+#topbar{
+	background-color: #003366;
+	height: 45px;
+	width: 100%;
+	margin-top: -20px;
+	margin-left: -20px;
+	left:0px;
+	right: 0px;
+}
+
+.menuitems{
+	margin-top: -10px;
+	margin-right: -10px;
+	margin-left: -10px;
+	padding: 5px;
+	padding-right: 10px;
+	background-color: #003366;
+	font-family: 'ruda';
+	font-size: 24px;
+	color:white;
+	text-align: right;
+}
+.border
 {
 	background-color: #FFF;
 	padding:16px;
@@ -17,7 +52,10 @@ div.border
 
 /* Main header (name) */
 h1 {
-	text-align: center;
+	font-family: 'Ruda';
+	text-align: left;
+	font-size: 42px;
+	margin-top: 5px;
 }
 
 /*education */
