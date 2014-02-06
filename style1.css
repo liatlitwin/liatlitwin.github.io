@@ -27,7 +27,7 @@ img{
 	
 	padding: 5px;
 	padding-left: 10px;
-	background-color: #003366;
+	background-color: #45274A;
 	font-family: 'ruda';
 	font-size: 24px;
 	color:#E8E8FF;
@@ -38,7 +38,7 @@ img{
 {
 	background-color: #FFF;
 	padding:16px;
-	border:solid #AD967D;
+	border:solid #45274A;
 	border-width:1px 3px 3px 1px;
 	margin:16px auto;
 	max-width: 800px;
@@ -53,11 +53,17 @@ img{
 	position: fixed;
 	right:20px;
 }
+#biotext{
+	text-align: center;
+	max-width: 800px;
+	font-size: 16px;
+	margin: 50px;
+}
 
 /*education */
 h2{
 	font-size: 14px;
-	text-align: left;
+	text-align: center;
 
 	color: 6B3C73;
 }
