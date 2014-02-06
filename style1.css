@@ -1,45 +1,39 @@
 @import url(http://fonts.googleapis.com/css?family=Artifika);
-@import url(http://fonts.googleapis.com/css?family=Ruda);
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes|Ruda);
 
-a:link{color:white; text-decoration: none}
-a:hover{color:grey; text-decoration: none}
-a:visited{color:white; text-decoration: none}
+a:link{color:#E8E8FF; text-decoration: none}
+a:visited{color:#E8E8FF; text-decoration: none}
+a:hover{color:#A2A2B2; text-decoration: none}
+
 
 body {
-	font-family: Georgia, 'Artifika', serif, 'Ruda', sans-serif;
+	font-family: Georgia, 'Artifika', 'Great Vibes', serif, 'Ruda', sans-serif;
 	font-size: small;
 	color: #45274A;
-	background-color: #DFD3B7;
+	background-color: #E8E8FF;
+	margin:0;
+	padding: 0;
 
 }
-img{
-	width:90%;
-	height:90%;
-	border:1px solid;
-	margin-top: 20px;
+#index{
+	background: url(liat.jpg);
 }
-#topbar{
-	background-color: #003366;
-	height: 45px;
-	width: 100%;
-	margin-top: -20px;
-	margin-left: -20px;
-	left:0px;
-	right: 0px;
+img{
+	width:100%;
+	height:100%;
 }
 
 .menuitems{
-	margin-top: -10px;
-	margin-right: -10px;
-	margin-left: -10px;
+	
 	padding: 5px;
-	padding-right: 10px;
+	padding-left: 10px;
 	background-color: #003366;
 	font-family: 'ruda';
 	font-size: 24px;
-	color:white;
-	text-align: right;
+	color:#E8E8FF;
+	position: fixed;
 }
+
 .border
 {
 	background-color: #FFF;
@@ -51,11 +45,13 @@ img{
 }
 
 /* Main header (name) */
-h1 {
-	font-family: 'Ruda';
-	text-align: left;
-	font-size: 42px;
+#mainheading {
+	font-family: 'Great Vibes';
+	
+	font-size: 100px;
 	margin-top: 5px;
+	position: fixed;
+	right:20px;
 }
 
 /*education */
