@@ -47,5 +47,5 @@ function renderMap()
 					types: ['food']
 				};
 				service = new google.maps.places.PlacesService(map);
-				service.search(request, callback);
+				//service.search(request, callback);
 			}
