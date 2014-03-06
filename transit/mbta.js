@@ -4,6 +4,8 @@ var request = new XMLHttpRequest();
 var me = new google.maps.LatLng(myLat, myLng);
 var infowindow= new google.maps.InfoWindow();
 var map;
+var marker;
+var myOptions = {zoom: 13, center: me, mapTypeId : google.maps.MapTypeId.ROADMAP};
 
 function init(){
 	map = new google.maps.Map(document.getElementById("map"));
