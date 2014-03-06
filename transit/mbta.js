@@ -8,7 +8,7 @@ var marker;
 var myOptions = {zoom: 13, center: me, mapTypeId : google.maps.MapTypeId.ROADMAP};
 
 function init(){
-	map = new google.maps.Map(document.getElementById("map"));
+	map = new google.maps.Map(document.getElementById("map"), myOptions);
 	getMyLocation();
 }
 
