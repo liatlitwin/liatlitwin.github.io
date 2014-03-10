@@ -85,6 +85,8 @@ var xhr;
 			//successful
 			scheduleData = JSON.parse(xhr.responseText);
 			createMarkers(scheduleData["line"]);
+			alert(scheduleData["line"]);
+
 		}
 		else if(xhr.readyState == 4 && xhr.status == 500){
 			//error
