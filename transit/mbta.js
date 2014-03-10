@@ -147,5 +147,5 @@ var stations = stationJSON;
 			});
 		}
 		console.log("created markers");
-}
+	}
 
