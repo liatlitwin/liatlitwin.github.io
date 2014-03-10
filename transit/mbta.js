@@ -65,7 +65,6 @@ var map;
 var marker;
 var infowindow = new google.maps.InfoWindow();
 var xhr;
-var stations = stationJSON;
 
 
 	
@@ -85,7 +84,7 @@ var stations = stationJSON;
 		if(xhr.readyState == 4 && xhr.status == 200){
 			//successful
 			scheduleData = JSON.parse(xhr.responseText);
-			scheduleDom = document.getElementById("schedule");
+			createMarkers(scheduleData["line"]);
 		}
 		else if(xhr.readyState == 4 && xhr.status == 500){
 			//error
@@ -131,21 +130,24 @@ var stations = stationJSON;
 		
 	}
 
-	function createMarkers()
+	function createMarkers(line_name)
 	{
 		stations.forEach(function(station){
-			var stationLoc = new google.maps.LatLng(station.lat, station.long);
-			var marker = new google.maps.Marker({
-				map: map,
-				position: stationLoc
-			});
 
-			google.maps.event.addListener(marker, 'click', function() {
-				infowindow.close();
-				infowindow.setContent(station.station);
-				infowindow.open(map, this);
-			});
-		});
+			if(station.line = line_name){
+				var stationLoc = new google.maps.LatLng(station.lat, station.long);
+				var marker = new google.maps.Marker({
+					map: map,
+					position: stationLoc
+				});
+
+				google.maps.event.addListener(marker, 'click', function() {
+					infowindow.close();
+					infowindow.setContent(station.station);
+					infowindow.open(map, this);
+				});
+			}); 
+		}
 		console.log("created markers");
 	}
 
