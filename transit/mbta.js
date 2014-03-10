@@ -134,7 +134,7 @@ var xhr;
 	{
 		stations.forEach(function(station){
 
-			if(station.line = line_name){
+			if(station.line == line_name){
 				var stationLoc = new google.maps.LatLng(station.lat, station.long);
 				var marker = new google.maps.Marker({
 					map: map,
@@ -146,8 +146,8 @@ var xhr;
 					infowindow.setContent(station.station);
 					infowindow.open(map, this);
 				});
-			}); 
-		}
+			} 
+		});
 		console.log("created markers");
 	}
 
