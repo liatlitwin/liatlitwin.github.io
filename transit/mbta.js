@@ -65,6 +65,7 @@ var map;
 var marker;
 var infowindow = new google.maps.InfoWindow();
 var xhr;
+var line_color;
 
 
 	
@@ -83,7 +84,7 @@ var xhr;
 		if(xhr.readyState == 4 && xhr.status == 200){
 			//successful
 			scheduleData = JSON.parse(xhr.responseText);
-			var line_color = scheduleData["line"];
+			line_color = scheduleData["line"];
 			createMarkers(line_color);
 			alert(scheduleData["line"]);
 
@@ -135,7 +136,7 @@ var xhr;
 	function createMarkers(color)
 	{
 		stations.forEach(function(station){
-
+			console.log("created markers");
 			if(station.line == color){
 				var stationLoc = new google.maps.LatLng(station.lat, station.long);
 				var marker = new google.maps.Marker({
