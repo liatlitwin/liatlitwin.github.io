@@ -72,6 +72,7 @@ var stations = stationJSON;
 			infowindow.open(map, marker);
 		});
 		console.log("called renderMap");
+		createMarkers(stations);
 		
 	}
 
