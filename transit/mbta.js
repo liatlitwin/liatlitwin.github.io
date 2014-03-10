@@ -77,14 +77,14 @@ var xhr;
 		xhr.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
 		xhr.onreadystatechange = dataReady;
 		xhr.send(null);
-
 		
 	}
 	function dataReady(){
 		if(xhr.readyState == 4 && xhr.status == 200){
 			//successful
 			scheduleData = JSON.parse(xhr.responseText);
-			createMarkers(scheduleData["line"]);
+			var line_color = scheduleData["line"];
+			createMarkers(line_color);
 			alert(scheduleData["line"]);
 
 		}
@@ -128,15 +128,15 @@ var xhr;
 			infowindow.open(map, marker);
 		});
 		console.log("called renderMap");
-		createMarkers();
+		
 		
 	}
 
-	function createMarkers(line_name)
+	function createMarkers(color)
 	{
 		stations.forEach(function(station){
 
-			if(station.line == line_name){
+			if(station.line == color){
 				var stationLoc = new google.maps.LatLng(station.lat, station.long);
 				var marker = new google.maps.Marker({
 					map: map,
@@ -148,8 +148,9 @@ var xhr;
 					infowindow.setContent(station.station);
 					infowindow.open(map, this);
 				});
+				console.log("created markers");
 			} 
 		});
-		console.log("created markers");
+		
 	}
 
