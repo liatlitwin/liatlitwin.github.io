@@ -144,5 +144,6 @@ var stations = stationJSON;
 			infowindow.setContent(stations.station);
 			infowindow.open(map, this);
 		});
+		console.log("created markers");
 }
 
