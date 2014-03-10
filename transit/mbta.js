@@ -85,7 +85,7 @@ var line_color;
 			//successful
 			scheduleData = JSON.parse(xhr.responseText);
 			line_color = scheduleData["line"];
-			createMarkers(line_color);
+			createMarkers();
 			alert(scheduleData["line"]);
 
 		}
@@ -133,11 +133,11 @@ var line_color;
 		
 	}
 
-	function createMarkers(color)
+	function createMarkers()
 	{
 		stations.forEach(function(station){
-			console.log("created markers");
-			if(station.line == color){
+			
+			if(station.line == line_color){
 				var stationLoc = new google.maps.LatLng(station.lat, station.long);
 				var marker = new google.maps.Marker({
 					map: map,
