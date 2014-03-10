@@ -57,7 +57,7 @@ var myLng = -71.11;
 var request = new XMLHttpRequest();
 var me = new google.maps.LatLng(myLat, myLng);
 var myOptions = {
-		zoom: 13, // The larger the zoom number, the bigger the zoom
+		zoom: 12, // The larger the zoom number, the bigger the zoom
 		center: me,
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 };
@@ -85,7 +85,8 @@ var line_color;
 			//successful
 			scheduleData = JSON.parse(xhr.responseText);
 			line_color = scheduleData["line"];
-			alert(scheduleData["line"]);
+			alert(line_color);
+			createMarkers();
 
 		}
 		else if(xhr.readyState == 4 && xhr.status == 500){
@@ -128,15 +129,17 @@ var line_color;
 			infowindow.open(map, marker);
 		});
 		console.log("called renderMap");
-		createMarkers();
+		
 		
 	}
 
 	function createMarkers()
 	{
+		console.log("created markers");
 		stations.forEach(function(station){
+			console.log("created markers");
 			
-			if(station.line == line_color){
+			if(station.Line.toLowerCase() == line_color){
 				var stationLoc = new google.maps.LatLng(station.lat, station.long);
 				var marker = new google.maps.Marker({
 					map: map,
