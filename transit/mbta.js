@@ -85,7 +85,6 @@ var line_color;
 			//successful
 			scheduleData = JSON.parse(xhr.responseText);
 			line_color = scheduleData["line"];
-			createMarkers();
 			alert(scheduleData["line"]);
 
 		}
@@ -129,7 +128,7 @@ var line_color;
 			infowindow.open(map, marker);
 		});
 		console.log("called renderMap");
-		
+		createMarkers();
 		
 	}
 
