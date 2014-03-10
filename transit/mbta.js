@@ -1,4 +1,4 @@
-var stationJSON = [{"Line":"Blue","station":"Airport","lat":42.374262,"long":-71.030395},
+var stations = [{"Line":"Blue","station":"Airport","lat":42.374262,"long":-71.030395},
 {"Line":"Blue","station":"Aquarium","lat":42.359784,"long":-71.051652},
 {"Line":"Blue","station":"Beachmont","lat":42.39754234,"long":-70.99231944},
 {"Line":"Blue","station":"Bowdoin","lat":42.361365,"long":-71.062037},
@@ -127,23 +127,25 @@ var stations = stationJSON;
 			infowindow.open(map, marker);
 		});
 		console.log("called renderMap");
-		createMarkers(stations);
+		createMarkers();
 		
 	}
 
-	function createMarkers(stations)
+	function createMarkers()
 	{
-		var stationLoc = new google.maps.LatLng(stations.lat, stations.long);
-		var marker = new google.maps.Marker({
-			map: map,
-			position: stationLoc
-		});
+		stations.forEach(function(station){
+			var stationLoc = new google.maps.LatLng(station.lat, station.long);
+			var marker = new google.maps.Marker({
+				map: map,
+				position: stationLoc
+			});
 
-		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.close();
-			infowindow.setContent(stations.station);
-			infowindow.open(map, this);
-		});
+			google.maps.event.addListener(marker, 'click', function() {
+				infowindow.close();
+				infowindow.setContent(station.station);
+				infowindow.open(map, this);
+			});
+		}
 		console.log("created markers");
 }
 
